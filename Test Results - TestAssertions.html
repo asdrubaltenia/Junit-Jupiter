@@ -572,9 +572,9 @@ jQuery.cookie = function(name, value, options) {
     <body>
         <div id="container">
             <div id="header">
-                <div class="time" xmlns="">23 ms</div>
+                <div class="time" xmlns="">52 ms</div>
                 <h1>
-                    TestAssertions: <strong><span class="total" xmlns="http://www.w3.org/1999/xhtml">1 total, </span><span class="passed">1 passed</span></strong>
+                    TestAssertions: <strong><span class="total" xmlns="http://www.w3.org/1999/xhtml">2 total, </span><span class="failed">1 failed, </span><span class="passed">1 passed</span></strong>
                 </h1>
                 <div id="treecontrol">
                     <ul>
@@ -591,18 +591,31 @@ jQuery.cookie = function(name, value, options) {
             </div>
             <div id="content">
                 <ul id="tree">
-                    C:\Users\asdru\.jdks\openjdk-21.0.2\bin\java.exe -ea -Didea.test.cyclic.buffer.size=1048576 "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\lib\idea_rt.jar=65266:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "C:\Users\asdru\.m2\repository\org\junit\platform\junit-platform-launcher\1.11.3\junit-platform-launcher-1.11.3.jar;C:\Users\asdru\.m2\repository\org\junit\platform\junit-platform-engine\1.11.3\junit-platform-engine-1.11.3.jar;C:\Users\asdru\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.11.3\junit-jupiter-engine-5.11.3.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\lib\idea_rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\plugins\junit\lib\junit5-rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\plugins\junit\lib\junit-rt.jar;C:\Users\asdru\IdeaProjects\Junit-Jupiter\target\test-classes;C:\Users\asdru\IdeaProjects\Junit-Jupiter\target\classes;C:\Users\asdru\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.11.3\junit-jupiter-api-5.11.3.jar;C:\Users\asdru\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\asdru\.m2\repository\org\junit\platform\junit-platform-commons\1.11.3\junit-platform-commons-1.11.3.jar;C:\Users\asdru\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar" com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit5 TestAssertions
+                    C:\Users\asdru\.jdks\openjdk-21.0.2\bin\java.exe -ea -Didea.test.cyclic.buffer.size=1048576 "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\lib\idea_rt.jar=50518:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\bin" -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 -classpath "C:\Users\asdru\.m2\repository\org\junit\platform\junit-platform-launcher\1.11.3\junit-platform-launcher-1.11.3.jar;C:\Users\asdru\.m2\repository\org\junit\platform\junit-platform-engine\1.11.3\junit-platform-engine-1.11.3.jar;C:\Users\asdru\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.11.3\junit-jupiter-engine-5.11.3.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\lib\idea_rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\plugins\junit\lib\junit5-rt.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.4\plugins\junit\lib\junit-rt.jar;C:\Users\asdru\Junit-Jupiter\target\test-classes;C:\Users\asdru\Junit-Jupiter\target\classes;C:\Users\asdru\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.11.3\junit-jupiter-api-5.11.3.jar;C:\Users\asdru\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\asdru\.m2\repository\org\junit\platform\junit-platform-commons\1.11.3\junit-platform-commons-1.11.3.jar;C:\Users\asdru\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar" com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit5 TestAssertions
 ### ANTES DE TODO ###
 ### DESPUES DE TODO ###
-Process finished with exit code 0
+Process finished with exit code -1
 
                     <li class="level test" xmlns="">
                         <span><em class="time">
-                                <div class="time">23 ms</div>
+                                <div class="time">22 ms</div>
                             </em><em class="status">passed</em>prueba1()</span>
                         <ul>
                             <li class="text">
-                                <span class="stdout">Antes de cada test realizar suma 10<br/>Despues de cada test realizar resta 0<br/></span>
+                                <span class="stdout">Antes de cada test realizar suma: 10<br/>Despues de cada test realizar resta: 0<br/></span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="level test failed open">
+                        <span><em class="time">
+                                <div class="time">30 ms</div>
+                            </em><em class="status">failed</em>prueba2()</span>
+                        <ul>
+                            <li class="text">
+                                <span class="stdout">Antes de cada test realizar suma: 10<br/>Despues de cada test realizar resta: 0<br/></span>
+                            </li>
+                            <li class="text">
+                                <span class="stderr">org.opentest4j.AssertionFailedError: El valor debería ser menor que 5 ==> <br/>	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)<br/>	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)<br/>	at org.junit.jupiter.api.AssertFalse.failNotFalse(AssertFalse.java:63)<br/>	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:36)<br/>	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:239)<br/>	at TestAssertions.prueba2(TestAssertions.java:44)<br/>	at java.base/java.lang.reflect.Method.invoke(Method.java:580)<br/>	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/>	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)<br/></span>
                             </li>
                         </ul>
                     </li>
@@ -610,7 +623,7 @@ Process finished with exit code 0
             </div>
         </div>
         <div id="footer">
-            <p>Generated by IntelliJ IDEA on 07-11-24 20:07</p>
+            <p>Generated by IntelliJ IDEA on 12-11-24 18:37</p>
         </div>
     </body>
 </html>

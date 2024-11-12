@@ -22,7 +22,7 @@ public class TestAssertions {
         int a = 5;
         int b = 5;
         int suma = a + b;
-        System.out.println("Antes de cada test realizar suma " + suma);
+        System.out.println("Antes de cada test realizar suma: " + suma);
     }
 
     @Tag("Validar_igualdad")
@@ -41,7 +41,7 @@ public class TestAssertions {
     @Tag("falso")
     public void prueba2() {
         int valor = 4;
-        Assertions.assertFalse(valor > 5, "El valor debería ser menor que 5");
+        Assertions.assertFalse(valor > 3, "El valor debería ser menor que 5");
     }
 
     @AfterEach
@@ -49,7 +49,7 @@ public class TestAssertions {
         int a = 5;
         int b = 5;
         int resta = a - b;
-        System.out.println("Despues de cada test realizar resta " + resta);
+        System.out.println("Despues de cada test realizar resta: " + resta);
     }
 
     @AfterAll
